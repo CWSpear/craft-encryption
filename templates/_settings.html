@@ -1,0 +1,12 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    first:        true,
+    label:        "Salt"|t,
+    id:           'salt',
+    name:         'salt',
+    instructions: "This is the salt used as a 'key' to decrypt hashes. Don't share it with anyone."|t,
+    value:        settings.salt,
+    autofocus:    true,
+    errors:       settings.getErrors('salt')
+}) }}
