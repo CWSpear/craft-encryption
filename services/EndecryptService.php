@@ -4,21 +4,21 @@ namespace Craft;
 class EndecryptService extends BaseApplicationComponent
 {
     /**
-     * A $pepper to make it a little harder to decrypt (unless you know it's this plugin and find the $pepper here...)
+     * A $pepper to make it a little harder to decrypt (unless you know it's this plugin and find the $pepper here...).
      * 
      * @var string
      */
     private static $pepper = 'qfopkeb234egoiewokh5wv49wu8h4983h';
 
     /**
-     * Secure Key used in the encryption
+     * Secure Key used in the encryption.
      * 
      * @var string
      */
     private $secureKey;
 
     /**
-     * IV used in the encryption
+     * IV used in the encryption.
      * 
      * @var string
      */
@@ -39,8 +39,8 @@ class EndecryptService extends BaseApplicationComponent
     /**
      * Take a string and encrypt it, returning the encrypted hash.
      * 
-     * @param  String $str String to be encrypted
-     * @return String      Encrypted hash
+     * @param  string $str String to be encrypted
+     * @return string      Encrypted hash
      */
     public function encrypt($str)
     {
@@ -56,8 +56,8 @@ class EndecryptService extends BaseApplicationComponent
     /**
      * Take an encrypted hash and decrypt it, returning the decrypted string.
      * 
-     * @param  String $hash Hash to be decrypted (which was encrypted by this service's encrypt method)
-     * @return String       Decrypted string
+     * @param  string $hash Hash to be decrypted (which was encrypted by this service's encrypt method)
+     * @return string       Decrypted string
      */
     public function decrypt($hash)
     {
